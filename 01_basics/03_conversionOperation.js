@@ -72,3 +72,5 @@ num1 = num2 = num3 = 2 + 2 //this is not the right way to write a code in this c
 let gameCounter = 100
 ++gameCounter //this is increment operator and this is prefix-increment operator
 console.log(gameCounter) //output is 101
+
+// THANK YOU
