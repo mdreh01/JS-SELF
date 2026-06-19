@@ -1,4 +1,4 @@
-// PRIMITIVE DATA-TYPE:--
+// PRIMITIVE DATA-TYPE:--Stack Memory(primitive)
 
 //  7 types : String, Number, Boolean, null, undefined, Symbol, BigInt
 
@@ -21,7 +21,7 @@ console.log(id == anotherId)
 
 // const bigNumber = 3456543576654356754n //it is bigInt
 
-// REFERENCE(NON-PRIMITIVE DATA-TYPE):--
+// REFERENCE(NON-PRIMITIVE DATA-TYPE):--Heap Memory(non-primitive)
 //non-primitive data-types returns object from typeof() function
 
 //Types:- Array, Objects, Functions
@@ -45,4 +45,28 @@ const myFunction = function(){
 console.log(typeof outsideTemp)
 //null ka typeof object aayega
 
-//thank you
+// ++++++++++++++++++++++++++++++++++++++++
+
+//Stack Memory(Primitive), Heap Memory(Non-Primitive)
+
+//Stack ke andar ham jab bhi koichiz lenge to hame uska copy milta h 
+//lekin Heap me nhi, Heap me hame uska reference milta h agar ek ko change kiya to dusra me bhi hoga change
+
+let myYoutubename = "Rehandotcom"
+let anothername = myYoutubename
+console.log(anothername)
+anothername = "Ray01yt"
+
+console.log(myYoutubename)
+console.log(anothername)//output me 'Ray01yt' aayega kyuki hamne isko last time edit kiya h aur call kiya h plus stack me copy store hoti h aur jab hamne usko  new avlue di to stack me vo store  hoke jab print karvayenge to new value output aayegi 
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+userTwo.email = "mdreh21@gmail.com"//Heap me reference hota h agar kisi value ko change kiya h to vo first vale aur second vale output me same show karegi kyuki vo copy nhi karti Stack jaisa iska reference hota h for example ke liye code dekho.
+
+console.log(userOne.email)
+console.log(userTwo.email)
