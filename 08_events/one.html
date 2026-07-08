@@ -52,16 +52,18 @@
         
 
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.parentNode)
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        
     }, false)
 
+// removeIt.parentNode.removeChild(removeIt)
 
-
-
-
-
-
-
+//upar vale project me hamne photo ke click pe usko remove karna aur uske baare me bataye ki 'IMG' hai aur 'Li' me hai ki nhi
 
 </script>
 </html>
