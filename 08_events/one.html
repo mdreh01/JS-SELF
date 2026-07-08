@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+        <div>
+            <ul id="images">
+                <li><img width="200px" id="lion" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRepI3eM5082Ky-wnersqMeWTlHNMTVFYTv15jHMW1tUbevvyPTDc5B9Pk&s" alt="lion"></li>  
+                <li><img width="200px" id="japan" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpcMTCiwQAs4gBpYyJL4IHF1otIw5vIepivNXO55XrpA&s=10" alt="japan"></li>
+                <li><img width="200px" id="cat" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIay_AVuLLJX1-232tGPZJIz7epXtEMKtJGxnIFg2rZg&s=10" alt="cat"></li>
+                <li><img width="200px" id="dog" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGlm76XFDKFh1OPS7RxI1hVu2HfS_nlTHycS4cLJxZfg&s=10" alt="dog"></li>     
+                <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>    
+             </ul>
+        </div>
+</body>
+<script>
+        // document.getElementById('lion').onclick = function(){
+        //     alert("lion clicked")
+        // } ye itna accha approach nhi h 
+
+
+        //attachEvent()
+        //jQuery - on
+
+        
+// type, timestamp, defaultPrevented
+// target, toElement(), srcElement(), currentTarget,
+// clientX, clientY, screenX, screenY
+// altKey, ctrlKey, shhiftKey, keyCode
+
+
+// document.getElementById('images').addEventListener('click', function(e){
+//             console.log("click inside the ul");  
+//         }, false)
+
+// document.getElementById('cat').addEventListener('click', function(e){
+//             console.log("click owl");  
+//             e.stopPropagation()
+//         }, false)
+
+
+// document.getElementById('google').addEventListener
+// ('click', function(e){
+//     e.preventDefault()
+//     e.stopPropagation()
+//     console.log('google clicked');
+// }, false)
+        
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode)
+    }, false)
+
+
+
+
+
+
+
+
+
+</script>
+</html>
